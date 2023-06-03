@@ -1,0 +1,243 @@
+/* Stylings for desktop view */
+/* General Stylings */
+html{
+    background-color: white;
+    font-family: sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+/* Hiding the show/hide button */
+#secondary-nav-opener{
+    display: none;
+}
+#secondary-nav{
+    display: flex;
+    background-color: grey;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+/* styling each of the navigation links */
+nav#secondary-nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+nav#secondary-nav a:hover{
+    text-decoration: none;
+    color: gold;
+}
+nav ul{
+  display:flex;  
+  list-style:none;
+  list-style-type: none;
+}
+/* Header */
+header{
+    display: flex;
+    background-color: white;
+}
+header h1{
+    flex: 0 1 50%;
+}
+header form{
+    flex: 10 0 1%;
+    padding-left:200px;
+    margin-top: 40px;
+}
+input[type=text]:focus {
+    background-color: yellowgreen;
+}
+input[type=text]{
+    border-radius: 10px;
+}
+header a:hover {
+    text-decoration: none;
+    color: gold;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+/* primary nav */
+#primary-nav-opener{
+    display: none;
+}
+nav#primary-nav{
+    background-color: rgb(209, 209, 209);
+    padding-bottom:0px;
+    padding-top: 1px;
+    margin-bottom: -20px;
+}
+nav#primary-nav a{
+    margin-left: -20px;
+    padding: 20px;
+    text-decoration: none;
+    color: grey;
+    font-weight: 600;
+}
+nav#primary-nav a:hover{
+    text-decoration: none;
+    color: gold;
+}
+/* main vody of the webpage including all the text and the background image */
+main{
+    background-image: url("../img/dalfcs.jpg");
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+main div{
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+main h3{
+    color: gold;
+    text-transform: uppercase;
+}
+main p, ul{
+    padding-bottom: 1em;
+}
+main p, li{
+    font-size: small;
+}
+/* footer */
+footer{
+    background-color: black;
+    padding: 40px;
+    margin-top: 100px;
+}
+footer span{
+    color: white;
+}
+footer nav{
+    padding-left: 270px;
+    margin-top: -20px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+footer a:hover{
+    text-decoration: none;
+    color: gold;
+}
+
+#secondary-nav {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+/* Responsive styles for tablet view */
+@media screen and (min-width:840px) and (max-width:1000px) {
+    html{
+        margin: 0;
+        padding: 0;
+    }
+    #secondary-nav{
+        display: flex;
+    }
+    #secondary-nav a{
+        flex-direction: row-reverse;
+    }
+    header{
+        background-image: url(../img/dalfcs.jpg);
+    }
+    main{
+        background-image: none;
+    }
+    header a{
+        display: flex;
+        flex: 0 1 40%;
+        color: white;
+    }
+    #about-course, #details, #assignments{
+        float: left;
+        width: 50%;
+        align-items:flex-end;
+    }
+    #grading, #exams, #contact{
+        float: right;
+        width:50%;
+    }
+    footer{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        flex-direction: column;
+        margin-top: 3500px;
+    }
+}
+
+/* Responsive styles for mobile view*/
+@media screen and (max-width: 840px) {
+    html{
+        padding: 0;
+        margin: 0;
+    }
+    #secondary-nav-opener{
+        display: flex;
+        background-color: grey;
+        color: white;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #primary-nav-opener{
+        display: flex;
+        background-color: rgb(209, 209, 209);
+        padding-top: 10px;
+        justify-content: center;
+    }
+    #primary-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    #secondary-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    #secondary-nav li, #primary-nav li{
+        padding-bottom: 20px;
+    }
+    #secondary-nav{
+        padding-top: 10px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header h1{
+        text-align: center;
+    }
+    header form{
+        justify-content: center;
+    }
+    header form{
+        padding-bottom: 10px;
+    }
+    main{
+        background-image: unset;
+    }
+    footer{
+        display:flex;   
+        justify-content:center;
+        align-items:center;
+    }
+    #footer-nav{
+        flex-direction: column;
+        padding-top: 100px;
+        align-items: center;
+    }
+    #footer-nav a{
+        padding-right: 300px;
+    }
+    #copyright{
+        padding-left: 300px;
+    }
+}
